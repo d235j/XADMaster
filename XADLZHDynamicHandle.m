@@ -25,6 +25,11 @@
 
 -(id)initWithHandle:(CSHandle *)handle length:(off_t)length
 {
+    return [self initWithHandle:handle length:length prefill:YES];
+}
+
+-(id)initWithHandle:(CSHandle *)handle length:(off_t)length prefill:(BOOL)prefill
+{
 	if((self=[super initWithInputBufferForHandle:handle length:length windowSize:4096]))
 	{
 		static const int lengths[64]=
@@ -38,6 +43,7 @@
 		distancecode=[[XADPrefixCode alloc] initWithLengths:lengths numberOfSymbols:64
 		maximumLength:8 shortestCodeIsZeros:YES];
 	}
+    pfill = prefill;
 	return self;
 }
 
@@ -78,7 +84,11 @@
 	for(int i=0;i<256;i++) windowbuffer[256*13+18+i]=i;
 	for(int i=0;i<256;i++) windowbuffer[256*13+256+18+i]=255-i;
 	memset(&windowbuffer[256*13+512+18],0,128);
-	memset(&windowbuffer[256*13+512+128+18],' ',128-18);
+    if(!pfill)
+        memset(&windowbuffer[256*13+512+128+18],0,128-18);
+    else
+        memset(&windowbuffer[256*13+512+128+18],' ',128-18);
+
 }
 
 -(int)nextLiteralOrOffset:(int *)offset andLength:(int *)length atPosition:(off_t)pos
@@ -88,8 +98,11 @@
 	{
 		if(CSInputNextBit(input)) node=node->leftchild;
 		else node=node->rightchild;
-		if(!node) [XADException raiseIllegalDataException];
+        if(!node) {
+            [XADException raiseIllegalDataException];
+        }
 	}
+
 
 	[self updateNode:node];
 
@@ -98,12 +111,11 @@
 	if(lit<0x100) return lit;
 	else
 	{
-		*length=lit-0x100+3;
+        *length=lit -0x100+3;
 
 		int highbits=CSInputNextSymbolUsingCode(input,distancecode);
 		int lowbits=CSInputNextBitString(input,6);
 		*offset=(highbits<<6)+lowbits+1;
-
 		return XADLZSSMatch;
 	}
 }

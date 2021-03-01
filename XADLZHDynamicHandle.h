@@ -33,9 +33,11 @@ struct XADLZHDynamicNode
 {
 	XADPrefixCode *distancecode;
 	XADLZHDynamicNode *nodes[314*2-1],nodestorage[314*2-1];
+    BOOL pfill;
 }
 
 -(id)initWithHandle:(CSHandle *)handle length:(off_t)length;
+-(id)initWithHandle:(CSHandle *)handle length:(off_t)length prefill:(BOOL)prefill;
 -(void)dealloc;
 
 -(void)resetLZSSHandle;

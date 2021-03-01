@@ -415,6 +415,15 @@
 		1B467A1115CD9A73001AB1DD /* XADSWFParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31CB7713C2890600ED119E /* XADSWFParser.h */; };
 		1B467A1215CD9A73001AB1DD /* XADPNGWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31CB7F13C523A200ED119E /* XADPNGWriter.h */; };
 		1B467A1415CD9A73001AB1DD /* XADPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF3BA8F13EE08A300BE7400 /* XADPlatform.h */; };
+		63C2A67320142F4E0016DD65 /* XADDARTRLEHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2A66F20142F4E0016DD65 /* XADDARTRLEHandle.m */; };
+		63C2A67420142F4E0016DD65 /* XADDARTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2A67220142F4E0016DD65 /* XADDARTParser.m */; };
+		63C2A67720142F750016DD65 /* XADDARTRLEHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C2A67520142F740016DD65 /* XADDARTRLEHandle.h */; };
+		63C2A67820142F750016DD65 /* XADDARTParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C2A67620142F740016DD65 /* XADDARTParser.h */; };
+		63C2A679201430880016DD65 /* XADDARTParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C2A67620142F740016DD65 /* XADDARTParser.h */; };
+		63C2A67A2014308A0016DD65 /* XADDARTRLEHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C2A67520142F740016DD65 /* XADDARTRLEHandle.h */; };
+		63C2A67B201430910016DD65 /* XADDARTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2A67220142F4E0016DD65 /* XADDARTParser.m */; };
+		63C2A67C201430930016DD65 /* XADDARTRLEHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2A66F20142F4E0016DD65 /* XADDARTRLEHandle.m */; };
+
 		1B467A1515CD9A73001AB1DD /* ArithmeticDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF0EE2313FF2FA3007B8CF8 /* ArithmeticDecoder.h */; };
 		1B467A1615CD9A73001AB1DD /* Decompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF0EE2513FF2FA3007B8CF8 /* Decompressor.h */; };
 		1B467A1715CD9A73001AB1DD /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF0EE2713FF2FA3007B8CF8 /* InputStream.h */; };
@@ -2118,6 +2127,10 @@
 		1BF0EE9A14031860007B8CF8 /* VariantH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariantH.h; sourceTree = "<group>"; };
 		1BF0EE9C14031860007B8CF8 /* VariantI.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VariantI.c; sourceTree = "<group>"; };
 		1BF0EE9D14031860007B8CF8 /* VariantI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariantI.h; sourceTree = "<group>"; };
+		63C2A66F20142F4E0016DD65 /* XADDARTRLEHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XADDARTRLEHandle.m; sourceTree = "<group>"; };
+		63C2A67220142F4E0016DD65 /* XADDARTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XADDARTParser.m; sourceTree = "<group>"; };
+		63C2A67520142F740016DD65 /* XADDARTRLEHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADDARTRLEHandle.h; sourceTree = "<group>"; };
+		63C2A67620142F740016DD65 /* XADDARTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADDARTParser.h; sourceTree = "<group>"; };
 		1BF3BA8F13EE08A300BE7400 /* XADPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADPlatform.h; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* XADMaster_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADMaster_Prefix.pch; sourceTree = "<group>"; };
 		56FBC8DC0A57531D00BE98CF /* UniversalDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversalDetector.xcodeproj; path = ../UniversalDetector/UniversalDetector.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -2314,6 +2327,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				63C2A67620142F740016DD65 /* XADDARTParser.h */,
+				63C2A67520142F740016DD65 /* XADDARTRLEHandle.h */,
+				63C2A67220142F4E0016DD65 /* XADDARTParser.m */,
+				63C2A66F20142F4E0016DD65 /* XADDARTRLEHandle.m */,
 				1BBAB6760EC26AA6007FE6A2 /* XADArchiveParser.h */,
 				1BBAB6770EC26AA6007FE6A2 /* XADArchiveParser.m */,
 				1BBEF8AE14D8A31700790E4B /* XADArchiveParserDescriptions.h */,
@@ -3327,6 +3344,8 @@
 				1B6F13D1163E25160054C1AE /* XADMD5Handle.h in Headers */,
 				1B6F13DD163E25320054C1AE /* XADSHA1Handle.h in Headers */,
 				1BA155E31645BF0600BFF440 /* XADStuffItDESHandle.h in Headers */,
+				63C2A679201430880016DD65 /* XADDARTParser.h in Headers */,
+				63C2A67A2014308A0016DD65 /* XADDARTRLEHandle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3573,6 +3592,7 @@
 				1B75B8EF134E5BAC00510EA5 /* XADGzipParser.h in Headers */,
 				1B75B8F0134E5BAC00510EA5 /* xadIO.h in Headers */,
 				1B75B8F1134E5BAD00510EA5 /* XADISO9660Parser.h in Headers */,
+				63C2A67720142F750016DD65 /* XADDARTRLEHandle.h in Headers */,
 				1B75B8F2134E5BAE00510EA5 /* XADLArcHandles.h in Headers */,
 				1B75B8F3134E5BB000510EA5 /* XADLBRParser.h in Headers */,
 				1B75B8F4134E5BB100510EA5 /* XADLibXADIOHandle.h in Headers */,
@@ -3582,6 +3602,7 @@
 				1B75B8F8134E5BB300510EA5 /* XADLZHParser.h in Headers */,
 				1B75B8F9134E5BB400510EA5 /* XADLZHSFXParsers.h in Headers */,
 				1B75B8FA134E5BB600510EA5 /* XADLZHStaticHandle.h in Headers */,
+				63C2A67820142F750016DD65 /* XADDARTParser.h in Headers */,
 				1B75B8FB134E5BB600510EA5 /* XADLZMA2Handle.h in Headers */,
 				1B75B8FC134E5BB700510EA5 /* XADLZMAAloneParser.h in Headers */,
 				1B75B8FD134E5BB700510EA5 /* XADLZMAHandle.h in Headers */,
@@ -4230,6 +4251,8 @@
 				1BA155E71645BF0600BFF440 /* XADStuffItDESHandle.m in Sources */,
 				1B86817F167C1005007BEA5D /* XADWARCParser.m in Sources */,
 				1B738CA317DBE7E400481D43 /* XADPMArc1Handle.m in Sources */,
+				63C2A67B201430910016DD65 /* XADDARTParser.m in Sources */,
+				63C2A67C201430930016DD65 /* XADDARTRLEHandle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4974,6 +4997,8 @@
 				1BA155E61645BF0600BFF440 /* XADStuffItDESHandle.m in Sources */,
 				1B86817C167BCEB7007BEA5D /* XADWARCParser.m in Sources */,
 				1B738CA017DBC83400481D43 /* XADPMArc1Handle.m in Sources */,
+				63C2A67420142F4E0016DD65 /* XADDARTParser.m in Sources */,
+				63C2A67320142F4E0016DD65 /* XADDARTRLEHandle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

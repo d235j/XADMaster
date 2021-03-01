@@ -40,6 +40,7 @@
 #import "XADCompressParser.h"
 #import "XADCpioParser.h"
 #import "XADCrunchParser.h"
+#import "XADDARTParser.h"
 #import "XADDiskDoublerParser.h"
 #import "XADGzipParser.h"
 #import "XADISO9660Parser.h"
@@ -224,6 +225,7 @@ static int maxheader=0;
 		[XADCompactProParser class],
 		[XADARJParser class],
 		[XADZipMultiPartParser class],
+        [XADDARTParser class],
 
 		// Over-eager detectors
 		[XADARCParser class],
